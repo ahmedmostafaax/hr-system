@@ -13,13 +13,17 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
+        source: "/api/auth/:path*",
+        destination: "http://localhost:5000/api/v1/auth/:path*",
+      },
+      {
         source: "/api/v1/:path*",
         destination: "http://localhost:5000/api/v1/:path*",
       },
     ];
   },
   typescript: {
-    ignoreBuildErrors: true,  
+    ignoreBuildErrors: true,
   },
 };
 
