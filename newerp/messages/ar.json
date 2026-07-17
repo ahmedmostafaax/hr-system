@@ -1,0 +1,982 @@
+{
+  "sidebar": {
+    "subtitle": "نظام الموارد البشرية",
+    "logout": "تسجيل الخروج",
+    "groups": {
+      "home": "الرئيسية",
+      "hr": "الموارد البشرية",
+      "financial": "المعاملات المالية",
+      "payroll": "الرواتب",
+      "accounting": "المحاسبة",
+      "reports": "التقارير",
+      "settings": "الإعدادات",
+      "admin": "الإدارة",
+      "self": "حسابي",
+      "employees": "الموظفون",
+      "contracts": "العقود",
+      "transactions": "المعاملات"
+    },
+    "items": {
+      "dashboard": "لوحة التحكم",
+      "attendance": "الحضور",
+      "payroll": "دورات الرواتب",
+      "journalEntries": "القيود اليومية",
+      "accountingPeriods": "الفترات المحاسبية",
+      "reports": "التقارير",
+      "users": "المستخدمون",
+      "auditLog": "سجل التدقيق",
+      "departments": "الأقسام",
+      "shift": "الشيفتات",
+      "leave_type": "أنواع الإجازات",
+      "officialHolidays": "الإجازات الرسمية",
+      "account": "الحساب",
+      "allowance_types": "أنواع البدلات",
+      "absence_types": "أنواع الغياب",
+      "bonus_types": "أنواع المكافآت",
+      "insurance_settings": "إعدادات التأمين",
+      "employees": "الموظفون",
+      "employeeDocument": "مستندات الموظف",
+      "employeeRelative": "أقارب الموظف",
+      "employeeExperience": "خبرات الموظف",
+      "contracts": "العقود",
+      "contract_allowances": "بدلات العقد",
+      "contract_leaves": "إجازات العقد",
+      "custody": "العهدة",
+      "employeeLoan": "سلف الموظف",
+      "employeeBonus": "مكافآت الموظف",
+      "absences": "الغيابات",
+      "leave_requests": "طلبات الإجازة",
+      "myProfile": "بياناتي",
+      "myLeave": "طلبات إجازتي",
+      "myLoans": "سلفي وقروضي",
+      "myAttendance": "الحضور"
+    }
+  },
+  "common": {
+    "table": {
+      "emptyMessage": "لا يوجد بيانات متاحة",
+      "loadingMessage": "جاري التحميل...",
+      "searchPlaceholder": "بحث عن...",
+      "filterLabel": "تصفية",
+      "addFirstItem": "أضف أول عنصر لتبدأ العمل",
+      "addNew": "إضافة جديد"
+    },
+    "actions": {
+      "add": "إضافة",
+      "save": "حفظ",
+      "saving": "جاري الحفظ...",
+      "delete": "حذف",
+      "restore": "استرجاع",
+      "confirmDelete": "تأكيد الحذف",
+      "confirmRestore": "تأكيد الاسترجاع",
+      "deleteMessage": "هل أنت متأكد أنك تريد حذف هذا العنصر؟ لا يمكن التراجع عن هذا الإجراء.",
+      "restoreMessage": "هل أنت متأكد أنك تريد استرجاع هذا العنصر؟",
+      "cancel": "إلغاء",
+      "edit": "تعديل",
+      "errorOccurred": "حدث خطأ أثناء الـ"
+    },
+    "pagination": {
+      "previous": "السابق",
+      "next": "التالي",
+      "showing": "عرض صفحة",
+      "of": "من أصل",
+      "totalItems": "إجمالي النتائج:"
+    }
+  },
+  "login": {
+    "title": "أهلاً بعودتك",
+    "subtitle": "سجّل دخولك إلى حسابك",
+    "identifier": "رقم الهاتف او الايميل",
+    "password": "كلمة المرور",
+    "submit": "تسجيل الدخول",
+    "loading": "جارٍ تسجيل الدخول...",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "logout": "تسجيل الخروج",
+    "departments": "الإدارات",
+    "employees": "الموظفون",
+    "bonus": "المكافآت",
+    "shifts": "الورديات",
+    "error": {
+      "invalid": "اسم المستخدم أو كلمة المرور غير صحيحة",
+      "generic": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
+    },
+    "validation": {
+      "usernameRequired": "اسم المستخدم مطلوب",
+      "passwordRequired": "كلمة المرور مطلوبة",
+      "passwordMin": "يجب أن تكون كلمة المرور 6 أحرف على الأقل"
+    }
+  },
+  "changePassword": {
+    "title": "تغيير كلمة المرور",
+    "subtitle": "أدخل كلمة المرور الحالية والجديدة",
+    "forceResetSubtitle": "يجب تغيير كلمة المرور قبل المتابعة",
+    "forceResetNotice": "هذا أول تسجيل دخول لحسابك. أدخل كلمة المرور المؤقتة التي استلمتها ثم اختر كلمة مرور جديدة.",
+    "tempPassword": "كلمة المرور المؤقتة",
+    "currentPassword": "كلمة المرور الحالية",
+    "newPassword": "كلمة المرور الجديدة",
+    "confirmPassword": "تأكيد كلمة المرور الجديدة",
+    "submit": "حفظ كلمة المرور",
+    "success": "تم تغيير كلمة المرور بنجاح",
+    "invalidTempPassword": "كلمة المرور المؤقتة غير صحيحة",
+    "invalidCurrentPassword": "كلمة المرور الحالية غير صحيحة",
+    "genericError": "حدث خطأ غير متوقع"
+  },
+  "departments": {
+    "title": "الأقسام",
+    "subtitle": "إدارة وعرض هيكل الأقسام التنظيمية",
+    "stats": {
+      "total": "إجمالي الأقسام",
+      "active": "الأقسام النشطة",
+      "new": "أقسام جديدة",
+      "efficiency": "كفاءة النظام",
+      "updatedToday": "تم التحديث اليوم",
+      "lastMonth": "زيادة {count} عن الشهر الماضي",
+      "optimal": "أداء مثالي"
+    },
+    "addNew": "إضافة قسم جديد",
+    "editDepartment": "تعديل القسم",
+    "form": {
+      "name": "اسم القسم",
+      "namePlaceholder": "مثال: المحاسبة",
+      "type": "النوع",
+      "typePlaceholder": "مثال: اداري",
+      "parent": "القسم الأب (اختياري)",
+      "parentNone": "لا يوجد"
+    },
+    "types": {
+      "qabz": "قبض",
+      "sarf": "صرف",
+      "edari": "اداري"
+    },
+    "buttons": {
+      "add": "إضافة قسم",
+      "update": "تعديل",
+      "cancel": "إلغاء",
+      "delete": "حذف",
+      "search": "بحث...",
+      "newDepartment": "جديد",
+      "retry": "إعادة المحاولة"
+    },
+    "messages": {
+      "addSuccess": "تمت إضافة القسم بنجاح",
+      "updateSuccess": "تم تعديل القسم بنجاح",
+      "deleteSuccess": "تم حذف القسم بنجاح",
+      "deleteConfirm": "هل أنت متأكد من حذف هذا القسم؟",
+      "fetchError": "فشل تحميل الأقسام",
+      "operationFailed": "حدث خطأ، يرجى المحاولة لاحقًا",
+      "loading": "جارٍ التحميل...",
+      "noData": "لا توجد أقسام",
+      "processing": "جارٍ المعالجة..."
+    },
+    "table": {
+      "id": "الرقم",
+      "name": "اسم القسم",
+      "type": "النوع",
+      "parent": "القسم الأب",
+      "status": "الحالة",
+      "active": "نشط",
+      "inactive": "غير نشط",
+      "createdAt": "تاريخ الإنشاء",
+      "actions": "إجراءات"
+    },
+    "pagination": {
+      "previous": "السابق",
+      "next": "التالي",
+      "page": "صفحة"
+    }
+  },
+  "employees": {
+    "title": "الموظفون",
+    "description": "إدارة أعضاء الفريق",
+    "subtitle": "إدارة بيانات أعضاء الفريق",
+    "editEmployee": "تعديل الموظف",
+    "addNew": "إضافة موظف جديد",
+    "form": {
+      "code": "كود الموظف",
+      "fullName": "الاسم بالكامل",
+      "nationalId": "الرقم القومي / الهوية",
+      "birthDate": "تاريخ الميلاد",
+      "gender": "الجنس",
+      "phone": "رقم الهاتف",
+      "email": "البريد الإلكتروني",
+      "address": "العنوان",
+      "maritalStatus": "الحالة الاجتماعية",
+      "qualification": "المؤهل الدراسي",
+      "bankName": "اسم البنك",
+      "bankAccount": "رقم الحساب البنكي"
+    },
+    "table": {
+      "code": "الكود",
+      "name": "الاسم",
+      "phone": "رقم الهاتف",
+      "nationalId": "الرقم القومي",
+      "age": "العمر",
+      "department": "القسم",
+      "status": "الحالة",
+      "actions": "العمليات"
+    },
+    "buttons": {
+      "search": "بحث في الموظفين...",
+      "newEmployee": "موظف جديد",
+      "add": "إضافة",
+      "update": "تحديث",
+      "delete": "حذف"
+    },
+    "messages": {
+      "addSuccess": "تمت الإضافة بنجاح",
+      "updateSuccess": "تم التحديث بنجاح",
+      "operationFailed": "فشلت العملية، يرجى المحاولة مرة أخرى",
+      "noData": "لا توجد بيانات موظفين",
+      "confirmDelete": "تأكيد الحذف",
+      "deleteWarning": "هل أنت متأكد من حذف هذا الموظف؟"
+    }
+  },
+  "bonus": {
+    "title": "المكافآت",
+    "description": "إدارة مكافآت الموظفين"
+  },
+  "shifts": {
+    "title": "إدارة الورديات",
+    "subtitle": "تحديد أوقات العمل وأيام الدوام",
+    "stats": {
+      "total": "إجمالي الورديات",
+      "totalSubtitle": "جميع الورديات المسجلة",
+      "active": "الورديات النشطة",
+      "activeSubtitle": "ورديات قيد العمل",
+      "avgHours": "متوسط ساعات العمل",
+      "avgHoursSubtitle": "للوردية الواحدة",
+      "employees": "الموظفين الموزعين",
+      "employeesSubtitle": "موظف مرتبط بوردية"
+    },
+    "addNew": "إضافة وردية",
+    "form": {
+      "name": "الاسم",
+      "namePlaceholder": "مثال: صباحي",
+      "type": "النوع",
+      "typePlaceholder": "اختر نوع الوردية",
+      "startTime": "بداية الوقت",
+      "endTime": "نهاية الوقت",
+      "graceMinutes": "دقائق السماح",
+      "deductGrace": "خصم التاخير",
+      "deductGraceHint": "يتم خصم دقائق التأخير من الراتب",
+      "salaryBasisDays": "أساس احتساب الراتب (أيام/شهر)",
+      "workDays": "أيام العمل",
+      "salaryBasis": "أساس الراتب"
+    },
+    "types": {
+      "morning": "صباحية",
+      "evening": "مسائية",
+      "night": "ليلية",
+      "split": "مقسمة"
+    },
+    "days": {
+      "sun": "الأحد",
+      "mon": "الاثنين",
+      "tue": "الثلاثاء",
+      "wed": "الأربعاء",
+      "thu": "الخميس",
+      "fri": "الجمعة",
+      "sat": "السبت"
+    },
+    "buttons": {
+      "add": "إضافة",
+      "update": "تحديث",
+      "cancel": "إلغاء",
+      "delete": "حذف",
+      "search": "بحث...",
+      "filter": "تصفية",
+      "newShift": "وردية جديدة"
+    },
+    "messages": {
+      "addSuccess": "تمت الإضافة بنجاح",
+      "updateSuccess": "تم التحديث بنجاح",
+      "deleteSuccess": "تم حذف الوردية بنجاح",
+      "fetchError": "حدث خطأ أثناء جلب البيانات",
+      "operationFailed": "فشلت العملية",
+      "loading": "جارٍ التحميل...",
+      "noData": "لا توجد ورديات",
+      "confirmDelete": "تأكيد الحذف",
+      "deleteWarning": "هل أنت متأكد من حذف هذه الوردية؟",
+      "nameRequired": "اسم الوردية مطلوب",
+      "dayRequired": "اختر يوم عمل واحد على الأقل",
+      "fetchDetails": "جارِ جلب التفاصيل..."
+    },
+    "table": {
+      "id": "الرقم",
+      "name": "الاسم",
+      "type": "النوع",
+      "workDays": "أيام العمل",
+      "times": "الأوقات",
+      "actions": "العمليات",
+      "timeRange": "وقت العمل",
+      "grace": "دقائق السماح"
+    },
+    "editShift": "تعديل وردية"
+  },
+  "leaveTypes": {
+    "title": "أنواع الإجازات",
+    "subtitle": "إدارة الإجازات",
+    "addNew": "إضافة نوع",
+    "stats": {
+      "totalSubtitle": "جميع الأنواع المتاحة",
+      "avgBalanceSubtitle": "يوم / السنة",
+      "deductibleSubtitle": "تخصم من الراتب"
+    },
+    "table": {
+      "name": "اسم الإجازة",
+      "annualBalance": "الرصيد",
+      "affectsDeduction": "يؤثر على الخصم",
+      "actions": "العمليات"
+    },
+    "form": {
+      "name": "الاسم",
+      "namePlaceholder": "مثال: إجازة زواج",
+      "annualBalance": "الرصيد",
+      "annualBalancePlaceholder": "0",
+      "affectsDeduction": "يؤثر على الخصم",
+      "affectsDeductionHint": "هل سيتم خصم أيام هذه الإجازة من راتب الموظف؟",
+      "balancePlaceholder": "0",
+      "deductionHint": "يؤثر على الخصم",
+      "defaultDays": "الأيام الافتراضية",
+      "isPaid": "إجازة مدفوعة",
+      "paidHint": "هل يتم صرف راتب كامل خلال هذه الإجازة؟",
+      "requiresAttachment": "تتطلب مرفقات",
+      "attachmentHint": "هل يجب على الموظف رفع مستندات (مثل شهادة مرضية)؟",
+      "deductFromBalance": "خصم من الرصيد السنوي",
+      "deductHint": "هل يتم خصم أيام هذه الإجازة من رصيد الموظف السنوي؟",
+      "genderSpecific": "مخصصة للجنس",
+      "both": "للجميع",
+      "male": "ذكر",
+      "female": "أنثى"
+    },
+    "messages": {
+      "addSuccess": "تمت الإضافة بنجاح",
+      "updateSuccess": "تم التحديث بنجاح",
+      "deleteSuccess": "تم حذف نوع الإجازة بنجاح",
+      "fetchError": "فشل تحميل أنواع الإجازات",
+      "operationFailed": "فشلت العملية"
+    },
+    "validation": {
+      "nameRequired": "اسم الإجازة مطلوب",
+      "balanceRequired": "الرصيد السنوي مطلوب",
+      "balanceNumber": "يجب أن يكون الرصيد رقماً",
+      "balanceMin": "يجب أن يكون الرصيد 0 أو أكثر",
+      "deductionRequired": "يجب تحديد ما إذا كان يؤثر على الخصم"
+    },
+    "buttons": {
+      "search": "بحث...",
+      "newLeaveType": "إجازة جديدة",
+      "add": "إضافة",
+      "update": "تحديث"
+    },
+    "editLeaveType": "تعديل نوع الإجازة"
+  },
+  "officialHolidays": {
+    "title": "العطلات الرسمية",
+    "subtitle": "إدارة العطلات الرسمية",
+    "addNew": "إضافة عطلة",
+    "stats": {
+      "total": "إجمالي العطلات",
+      "totalSubtitle": "عطلة مسجلة هذا العام",
+      "upcoming": "العطلات القادمة",
+      "upcomingSubtitle": "مناسبات قادمة قريباً",
+      "totalDays": "إجمالي أيام العطلة",
+      "totalDaysSubtitle": "يوم إجازة رسمية"
+    },
+    "table": {
+      "name": "اسم العطلة",
+      "startDate": "تاريخ البدء",
+      "daysCount": "عدد الأيام",
+      "actions": "العمليات",
+      "duration": "المدة"
+    },
+    "form": {
+      "name": "الاسم",
+      "namePlaceholder": "مثال: عيد الفطر",
+      "startDate": "تاريخ البدء",
+      "daysCount": "عدد الأيام",
+      "daysCountPlaceholder": "1",
+      "daysPlaceholder": "مثال: 3"
+    },
+    "messages": {
+      "addSuccess": "تمت الإضافة بنجاح",
+      "updateSuccess": "تم التحديث بنجاح",
+      "deleteSuccess": "تم حذف العطلة بنجاح",
+      "fetchError": "فشل تحميل العطلات الرسمية",
+      "operationFailed": "فشلت العملية"
+    },
+    "validation": {
+      "nameRequired": "اسم العطلة مطلوب",
+      "dateInvalid": "تنسيق التاريخ غير صحيح (YYYY-MM-DD)",
+      "daysRequired": "عدد الأيام مطلوب",
+      "daysNumber": "عدد الأيام يجب أن يكون رقماً",
+      "daysMin": "يجب أن تكون العطلة يوماً واحداً على الأقل"
+    },
+    "buttons": {
+      "search": "بحث...",
+      "newHoliday": "عطلة جديدة",
+      "add": "إضافة",
+      "update": "تحديث"
+    },
+    "editHoliday": "تعديل العطلة"
+  },
+  "account": {
+    "title": "دليل الحسابات",
+    "subtitle": "إدارة الحسابات",
+    "addNew": "إضافة حساب",
+    "table": {
+      "name": "اسم الحساب",
+      "code": "كود الحساب",
+      "type": "النوع",
+      "currency": "العملة",
+      "actions": "العمليات",
+      "parent": "القسم الأب"
+    },
+    "form": {
+      "name": "اسم الحساب",
+      "namePlaceholder": "مثال: نقدية",
+      "code": "الكود",
+      "codePlaceholder": "1101",
+      "type": "النوع",
+      "typePlaceholder": "اختر النوع",
+      "parentId": "الحساب الرئيسي",
+      "parentIdPlaceholder": "اختر الحساب الأب (اختياري)",
+      "description": "الوصف",
+      "descriptionPlaceholder": "أضف وصفاً للحساب...",
+      "currency": "العملة",
+      "currencyPlaceholder": "مثال: EGP",
+      "parentAccount": "الحساب الرئيسي",
+      "noParent": "لا يوجد",
+      "descPlaceholder": "وصف الحساب..."
+    },
+    "messages": {
+      "addSuccess": "تمت الإضافة بنجاح",
+      "updateSuccess": "تم التحديث بنجاح",
+      "deleteSuccess": "تم حذف الحساب بنجاح",
+      "fetchError": "فشل تحميل دليل الحسابات",
+      "operationFailed": "فشلت العملية"
+    },
+    "validation": {
+      "nameRequired": "اسم الحساب مطلوب",
+      "codeRequired": "كود الحساب مطلوب",
+      "typeRequired": "نوع الحساب مطلوب",
+      "currencyRequired": "العملة مطلوبة"
+    },
+    "buttons": {
+      "search": "بحث...",
+      "newAccount": "حساب جديد",
+      "add": "إضافة",
+      "update": "تحديث"
+    },
+    "editAccount": "تعديل حساب"
+  },
+  "allowanceTypes": {
+    "title": "أنواع البدلات",
+    "subtitle": "إدارة البدلات",
+    "addNew": "إضافة بدل",
+    "table": {
+      "name": "اسم البدل",
+      "defaultAmount": "المبلغ الافتراضي",
+      "isPartOfSalary": "جزء من الراتب",
+      "accountCode": "الكود",
+      "actions": "العمليات",
+      "amount": "القيمة",
+      "salaryStatus": "حالة الراتب"
+    },
+    "form": {
+      "name": "اسم البدل",
+      "namePlaceholder": "مثال: بدل نقل",
+      "defaultAmount": "المبلغ الافتراضي",
+      "defaultAmountPlaceholder": "0.00",
+      "isPartOfSalary": "جزء من الراتب",
+      "isPartOfSalaryHint": "هل سيتم احتساب هذا البدل ضمن مفردات الراتب الأساسي؟",
+      "accountCode": "كود الحساب",
+      "accountCodePlaceholder": "مثال: 5101",
+      "salaryHint": "يدخل ضمن الراتب الأساسي؟"
+    },
+    "messages": {
+      "addSuccess": "تمت الإضافة بنجاح",
+      "updateSuccess": "تم التحديث بنجاح",
+      "deleteSuccess": "تم حذف نوع البدل بنجاح",
+      "fetchError": "فشل تحميل أنواع البدلات",
+      "operationFailed": "فشلت العملية"
+    },
+    "validation": {
+      "nameRequired": "اسم البدل مطلوب",
+      "amountMin": "يجب أن يكون المبلغ 0 أو أكثر",
+      "accountRequired": "كود الحساب مطلوب"
+    },
+    "buttons": {
+      "search": "بحث...",
+      "newAllowance": "بدل جديد",
+      "add": "إضافة",
+      "update": "تحديث"
+    },
+    "editAllowance": "تعديل البدل"
+  },
+  "accounts": {
+    "title": "دليل الحسابات",
+    "subtitle": "إدارة الحسابات",
+    "addNew": "إضافة حساب",
+    "table": {
+      "name": "اسم الحساب",
+      "code": "كود الحساب",
+      "type": "النوع",
+      "currency": "العملة",
+      "actions": "العمليات",
+      "parent": "القسم الأب"
+    },
+    "form": {
+      "name": "اسم الحساب",
+      "namePlaceholder": "مثال: نقدية",
+      "code": "الكود",
+      "codePlaceholder": "1101",
+      "type": "النوع",
+      "typePlaceholder": "اختر النوع",
+      "parentId": "الحساب الرئيسي",
+      "parentIdPlaceholder": "اختر الحساب الأب (اختياري)",
+      "description": "الوصف",
+      "descriptionPlaceholder": "أضف وصفاً للحساب...",
+      "currency": "العملة",
+      "currencyPlaceholder": "مثال: EGP",
+      "parentAccount": "الحساب الرئيسي",
+      "noParent": "لا يوجد",
+      "descPlaceholder": "وصف الحساب..."
+    },
+    "messages": {
+      "addSuccess": "تمت الإضافة بنجاح",
+      "updateSuccess": "تم التحديث بنجاح",
+      "deleteSuccess": "تم حذف الحساب بنجاح",
+      "fetchError": "فشل تحميل دليل الحسابات",
+      "operationFailed": "فشلت العملية"
+    },
+    "validation": {
+      "nameRequired": "اسم الحساب مطلوب",
+      "codeRequired": "كود الحساب مطلوب",
+      "typeRequired": "نوع الحساب مطلوب",
+      "currencyRequired": "العملة مطلوبة"
+    },
+    "buttons": {
+      "search": "بحث...",
+      "newAccount": "حساب جديد",
+      "add": "إضافة",
+      "update": "تحديث"
+    },
+    "editAccount": "تعديل حساب"
+  },
+  "allowances": {
+    "title": "أنواع البدلات",
+    "subtitle": "إدارة البدلات",
+    "addNew": "إضافة بدل",
+    "additionalDetails": "تفاصيل إضافية",
+    "isPartOfSalaryStatus": "جزء من الراتب",
+    "extraAllowanceStatus": "بدل إضافي",
+    "yes": "نعم",
+    "no": "لا",
+    "table": {
+      "name": "اسم البدل",
+      "defaultAmount": "المبلغ الافتراضي",
+      "isPartOfSalary": "جزء من الراتب",
+      "accountCode": "الكود",
+      "actions": "العمليات",
+      "amount": "القيمة",
+      "salaryStatus": "حالة الراتب"
+    },
+    "form": {
+      "name": "اسم البدل",
+      "namePlaceholder": "مثال: بدل نقل",
+      "defaultAmount": "المبلغ الافتراضي",
+      "defaultAmountPlaceholder": "0.00",
+      "isPartOfSalary": "جزء من الراتب",
+      "isPartOfSalaryHint": "هل سيتم احتساب هذا البدل ضمن مفردات الراتب الأساسي؟",
+      "accountCode": "كود الحساب",
+      "accountCodePlaceholder": "مثال: 5101",
+      "salaryHint": "يدخل ضمن الراتب الأساسي؟",
+      "selectAccount": "اختر الحساب"
+    },
+    "messages": {
+      "addSuccess": "تمت الإضافة بنجاح",
+      "updateSuccess": "تم التحديث بنجاح",
+      "deleteSuccess": "تم حذف نوع البدل بنجاح",
+      "fetchError": "فشل تحميل أنواع البدلات",
+      "operationFailed": "فشلت العملية"
+    },
+    "validation": {
+      "nameRequired": "اسم البدل مطلوب",
+      "amountMin": "يجب أن يكون المبلغ 0 أو أكثر",
+      "accountRequired": "كود الحساب مطلوب"
+    },
+    "buttons": {
+      "search": "بحث...",
+      "newAllowance": "بدل جديد",
+      "add": "إضافة",
+      "update": "تحديث"
+    },
+    "editAllowance": "تعديل البدل"
+  },
+  "holidays": {
+    "title": "العطلات الرسمية",
+    "subtitle": "إدارة العطلات الرسمية",
+    "addNew": "إضافة عطلة",
+    "stats": {
+      "total": "إجمالي العطلات",
+      "totalSubtitle": "عطلة مسجلة هذا العام",
+      "upcoming": "العطلات القادمة",
+      "upcomingSubtitle": "مناسبات قادمة قريباً",
+      "totalDays": "إجمالي أيام العطلة",
+      "totalDaysSubtitle": "يوم إجازة رسمية"
+    },
+    "table": {
+      "name": "اسم العطلة",
+      "startDate": "تاريخ البدء",
+      "daysCount": "عدد الأيام",
+      "actions": "العمليات",
+      "duration": "المدة"
+    },
+    "form": {
+      "name": "الاسم",
+      "namePlaceholder": "مثال: عيد الفطر",
+      "startDate": "تاريخ البدء",
+      "daysCount": "عدد الأيام",
+      "daysCountPlaceholder": "1",
+      "daysPlaceholder": "مثال: 3"
+    },
+    "messages": {
+      "addSuccess": "تمت الإضافة بنجاح",
+      "updateSuccess": "تم التحديث بنجاح",
+      "deleteSuccess": "تم حذف العطلة بنجاح",
+      "fetchError": "فشل تحميل العطلات الرسمية",
+      "operationFailed": "فشلت العملية"
+    },
+    "validation": {
+      "nameRequired": "اسم العطلة مطلوب",
+      "dateInvalid": "تنسيق التاريخ غير صحيح (YYYY-MM-DD)",
+      "daysRequired": "عدد الأيام مطلوب",
+      "daysNumber": "عدد الأيام يجب أن يكون رقماً",
+      "daysMin": "يجب أن تكون العطلة يوماً واحداً على الأقل"
+    },
+    "buttons": {
+      "search": "بحث...",
+      "newHoliday": "عطلة جديدة",
+      "add": "إضافة",
+      "update": "تحديث"
+    },
+    "editHoliday": "تعديل العطلة"
+  },
+  "absences": {
+    "title": "أنواع الغياب",
+    "subtitle": "إدارة أنواع وأسباب الغياب المختلفة",
+    "editAbsenceType": "تعديل نوع الغياب",
+    "editAbsence": "تعديل الغياب",
+    "addNew": "إضافة نوع غياب",
+    "absencePolicy": "سياسة الغياب",
+    "requiresApprovalStatus": "نعم، يتطلب موافقة",
+    "directAbsenceStatus": "لا، غياب مباشر",
+    "form": {
+      "name": "اسم نوع الغياب",
+      "namePlaceholder": "مثال: غياب بدون إذن",
+      "deductDays": "معامل الخصم (أيام)",
+      "daysPlaceholder": "مثال: 1.5",
+      "requiresPermission": "يتطلب إذن مسبق",
+      "permissionHint": "هل يتطلب هذا النوع الحصول على موافقة مسبقة؟"
+    },
+    "table": {
+      "name": "اسم النوع",
+      "deductFactor": "معامل الخصم",
+      "permission": "الإذن المسبق",
+      "actions": "الإجراءات"
+    },
+    "buttons": {
+      "search": "بحث في أنواع الغياب...",
+      "newAbsenceType": "نوع غياب جديد",
+      "add": "إضافة",
+      "update": "تحديث"
+    },
+    "messages": {
+      "addSuccess": "تمت الإضافة بنجاح",
+      "updateSuccess": "تم التحديث بنجاح",
+      "operationFailed": "فشلت العملية، يرجى المحاولة مرة أخرى"
+    }
+  },
+  "bonuses": {
+    "title": "أنواع المكافآت",
+    "subtitle": "إدارة المكافآت والحوافز للموظفين",
+    "editBonusType": "تعديل نوع المكافأة",
+    "addNew": "إضافة مكافأة جديدة",
+    "form": {
+      "name": "اسم المكافأة",
+      "namePlaceholder": "مثال: مكافأة أداء",
+      "paymentType": "طريقة الدفع",
+      "defaultAmount": "المبلغ الافتراضي",
+      "editableAmount": "قابل للتعديل",
+      "editableHint": "هل يمكن تغيير المبلغ عند منح المكافأة؟"
+    },
+    "table": {
+      "name": "اسم المكافأة",
+      "defaultAmount": "المبلغ الافتراضي",
+      "paymentMethod": "طريقة الدفع",
+      "flexibility": "المرونة",
+      "actions": "الإجراءات"
+    },
+    "buttons": {
+      "search": "بحث في المكافآت...",
+      "newBonusType": "مكافأة جديدة",
+      "add": "إضافة",
+      "update": "تحديث"
+    },
+    "messages": {
+      "addSuccess": "تمت الإضافة بنجاح",
+      "updateSuccess": "تم التحديث بنجاح",
+      "operationFailed": "فشلت العملية، يرجى المحاولة مرة أخرى"
+    }
+  },
+  "insurance": {
+    "title": "إعدادات التأمين",
+    "subtitle": "إدارة نسب التأمينات الاجتماعية والصحية",
+    "editSetting": "تعديل الإعدادات",
+    "addNew": "إضافة إعداد تأميني",
+    "form": {
+      "employeeRate": "نسبة الموظف (%)",
+      "companyRate": "نسبة الشركة (%)",
+      "effectiveFrom": "تاريخ التطبيق"
+    },
+    "table": {
+      "employeeRate": "نسبة الموظف",
+      "companyRate": "نسبة الشركة",
+      "effectiveDate": "تاريخ التطبيق",
+      "totalRate": "الإجمالي",
+      "actions": "الإجراءات"
+    },
+    "buttons": {
+      "search": "بحث في الإعدادات...",
+      "newSetting": "إعداد جديد",
+      "add": "إضافة",
+      "update": "تحديث"
+    },
+    "messages": {
+      "addSuccess": "تمت الإضافة بنجاح",
+      "updateSuccess": "تم التحديث بنجاح",
+      "operationFailed": "فشلت العملية، يرجى المحاولة مرة أخرى"
+    }
+  },
+  "experience": {
+    "title": "خبرات الموظفين",
+    "subtitle": "إدارة السجل الوظيفي والخبرات السابقة للموظفين",
+    "editExperience": "تعديل خبرة",
+    "addExperience": "إضافة خبرة جديدة",
+    "form": {
+      "employee": "الموظف",
+      "employeeSearchPlaceholder": "ابحث عن موظف...",
+      "company": "اسم الشركة",
+      "position": "المسمى الوظيفي",
+      "fromDate": "من تاريخ",
+      "toDate": "إلى تاريخ"
+    },
+    "table": {
+      "employee": "الموظف",
+      "role": "المسمى والشركة",
+      "duration": "الفترة",
+      "actions": "الإجراءات"
+    },
+    "buttons": {
+      "searchPlaceholder": "بحث في الخبرات...",
+      "newExperience": "خبرة جديدة",
+      "save": "حفظ الخبرة",
+      "update": "تحديث الخبرة"
+    },
+    "messages": {
+      "addSuccess": "تمت إضافة الخبرة بنجاح",
+      "updateSuccess": "تم تحديث الخبرة بنجاح",
+      "operationFailed": "فشلت العملية، يرجى المحاولة مرة أخرى"
+    },
+    "backToList": "رجوع للقائمة",
+    "systemLogs": "سجل النظام",
+    "profile": "ملف الموظف",
+    "createdAt": "تاريخ الإضافة",
+    "updatedAt": "آخر تحديث",
+    "code": "كود"
+  },
+  "documents": {
+    "title": "مستندات الموظف",
+    "subtitle": "عرض وإدارة الملفات المرفوعة للموظفين",
+    "addDoc": "إضافة مستند",
+    "editDoc": "تعديل المستند",
+    "owner": "صاحب المستند",
+    "fileLink": "رابط الملف الرقمي",
+    "openLink": "فتح الرابط",
+    "profile": "ملف الموظف",
+    "uploadDate": "تاريخ الرفع",
+    "uploadTime": "وقت الرفع",
+    "createdAt": "تاريخ الإنشاء",
+    "updatedAt": "آخر تحديث",
+    "status": "الحالة",
+    "active": "نشط",
+    "deleted": "محذوف",
+    "back": "رجوع",
+    "code": "كود الموظف",
+    "form": {
+      "employee": "الموظف",
+      "employeeSearchPlaceholder": "ابحث عن موظف...",
+      "docName": "اسم المستند",
+      "docNamePlaceholder": "مثال: بطاقة الهوية",
+      "file": "رابط الملف",
+      "filePlaceholder": "ضع رابط الملف هنا..."
+    },
+    "table": {
+      "employee": "الموظف",
+      "docName": "اسم المستند",
+      "view": "معاينة",
+      "viewFile": "عرض الملف",
+      "actions": "العمليات"
+    },
+    "messages": {
+      "addSuccess": "تمت إضافة المستند بنجاح",
+      "updateSuccess": "تم تحديث المستند بنجاح",
+      "deleteSuccess": "تم حذف المستند بنجاح",
+      "operationFailed": "فشلت العملية، يرجى المحاولة مرة أخرى"
+    },
+    "buttons": {
+        "newDoc": "مستند جديد",
+        "searchPlaceholder": "بحث في المستندات...",
+        "save": "حفظ",
+        "update": "تحديث"
+    }
+  },
+  "relatives": {
+    "title": "أقارب الموظف",
+    "subtitle": "إدارة وعرض أفراد عائلة الموظفين",
+    "addRelative": "إضافة قريب",
+    "editRelative": "تعديل بيانات القريب",
+    "backToList": "رجوع للقائمة",
+    "systemLogs": "سجل النظام",
+    "associatedEmployee": "الموظف التابع له",
+    "createdAt": "تاريخ الإضافة",
+    "updatedAt": "آخر تحديث",
+    "openProfile": "فتح ملف الموظف",
+    "code": "كود",
+    "form": {
+      "employee": "الموظف",
+      "employeePlaceholder": "ابحث عن موظف...",
+      "name": "اسم القريب",
+      "namePlaceholder": "مثال: أحمد علي",
+      "relation": "صلة القرابة",
+      "phone": "رقم الهاتف",
+      "phonePlaceholder": "مثال: 0123456789"
+    },
+    "table": {
+      "employee": "الموظف",
+      "name": "الاسم",
+      "relation": "صلة القرابة",
+      "phone": "رقم الهاتف",
+      "actions": "العمليات"
+    },
+    "relations": {
+      "Father": "أب",
+      "Mother": "أم",
+      "Spouse": "زوج/زوجة",
+      "Son": "ابن",
+      "Daughter": "ابنة",
+      "Brother": "أخ",
+      "Sister": "أخت",
+      "Other": "أخرى"
+    },
+    "messages": {
+      "addSuccess": "تمت إضافة القريب بنجاح",
+      "updateSuccess": "تم تحديث بيانات القريب بنجاح",
+      "operationFailed": "فشلت العملية، يرجى المحاولة مرة أخرى"
+    },
+    "buttons": {
+      "newRelative": "قريب جديد",
+      "searchPlaceholder": "بحث في الأقارب...",
+      "save": "حفظ",
+      "update": "تحديث"
+    }
+  },
+  "contracts": {
+    "title": "العقود",
+    "subtitle": "إدارة السجلات الوظيفية والتعاقدية للموظفين",
+    "editContract": "تعديل العقد",
+    "addNew": "إضافة عقد جديد",
+    "form": {
+      "employee": "الموظف",
+      "jobTitle": "المسمى الوظيفي",
+      "department": "القسم",
+      "baseSalary": "الراتب الأساسي",
+      "startDate": "تاريخ البدء",
+      "endDate": "تاريخ الانتهاء",
+      "duration": "المدة (بالسنوات)",
+      "shift": "الوردية",
+      "insurance": "إعدادات التأمين",
+      "status": "الحالة",
+      "overtime": "الوقت الإضافي مفعل",
+      "notes": "ملاحظات",
+      "attachment": "المرفق (رابط)"
+    },
+    "table": {
+      "employee": "الموظف",
+      "jobTitle": "الوظيفة",
+      "salary": "الراتب",
+      "status": "الحالة",
+      "actions": "العمليات"
+    },
+    "buttons": {
+      "search": "بحث في العقود...",
+      "newContract": "عقد جديد",
+      "save": "حفظ العقد",
+      "update": "تحديث العقد"
+    },
+    "messages": {
+      "addSuccess": "تم إضافة العقد بنجاح",
+      "updateSuccess": "تم تحديث العقد بنجاح",
+      "operationFailed": "فشلت العملية، حاول مرة أخرى"
+    }
+  },
+  "contractAllowances": {
+    "title": "بدلات العقود",
+    "subtitle": "إدارة المبالغ الإضافية المرتبطة بعقود الموظفين",
+    "editAllowance": "تعديل البدلات",
+    "addNew": "إضافة بدل جديد",
+    "editAllowanceDetails": "تعديل بيانات البدل",
+    "defaultName": "بدل مخصص",
+    "assignmentDetails": "تفاصيل التخصيص",
+    "contractInfo": "معلومات العقد",
+    "systemAudit": "سجل النظام",
+    "form": {
+      "contract": "العقد / الموظف",
+      "allowanceType": "نوع البدل",
+      "amount": "المبلغ المخصص"
+    },
+    "table": {
+      "contract": "العقد",
+      "allowanceType": "نوع البدل",
+      "amount": "المبلغ",
+      "actions": "إجراءات"
+    },
+    "details": {
+      "assignedAmount": "المبلغ المخصص (للعقد)",
+      "defaultAmount": "المبلغ الافتراضي (للبدل)",
+      "isPartOfSalary": "جزء من الراتب",
+      "accountCode": "كود الحساب",
+      "jobTitle": "المسمى الوظيفي",
+      "baseSalary": "الراتب الأساسي",
+      "createdAt": "تاريخ التخصيص",
+      "updatedAt": "وقت التحديث",
+      "yes": "نعم",
+      "no": "لا"
+    },
+    "buttons": {
+      "search": "بحث عن بدل...",
+      "newAllowance": "إضافة بدل لعقد",
+      "save": "حفظ",
+      "update": "تحديث",
+      "updateDetails": "تحديث البيانات",
+      "back": "رجوع",
+      "viewContract": "عرض العقد"
+    },
+    "messages": {
+      "addSuccess": "تمت إضافة البدل بنجاح",
+      "updateSuccess": "تم تحديث البدل بنجاح",
+      "operationFailed": "فشلت العملية"
+    }
+  }
+}

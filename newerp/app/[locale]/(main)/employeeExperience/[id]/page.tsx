@@ -1,0 +1,328 @@
+"use client";
+
+import { notify } from "@/lib/toast";
+import { useState, useEffect } from "react";
+import { useParams, useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { 
+  Briefcase, 
+  ArrowLeft, 
+  User, 
+  Building2, 
+  ShieldAlert,
+  ChevronRight,
+  Calendar,
+  Clock,
+  ExternalLink,
+  Hash,
+  History,
+  CalendarDays,
+  ArrowRightLeft
+} from "lucide-react";
+import { experienceService, type EmployeeExperience } from "../service";
+import { employeeService } from "@/lib/services";
+import Loading from "@/components/ui/Loading";
+import dynamic from "next/dynamic";
+import EditButton from "@/components/ui/EditButton";
+import SaveButton from "@/components/ui/SaveButton";
+import { RoleGuard } from "@/components/shared";
+
+const Modal = dynamic(() => import("@/components/ui/Modal"), { ssr: false });
+const DynamicForm = dynamic(() => import("@/components/ui/DynamicForm"), { ssr: false });
+
+export default function EmployeeExperienceDetailsPage() {
+  const t = useTranslations("experience");
+  const params = useParams();
+  const router = useRouter();
+  const isAr = params?.locale === "ar";
+  const rawId = params?.id;
+  const id = Number(rawId);
+  const isValidId = Number.isFinite(id) && id > 0;
+
+  const [experience, setExperience] = useState<EmployeeExperience | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formError, setFormError] = useState<string | null>(null);
+  const [formSuccess, setFormSuccess] = useState<string | null>(null);
+  const [employeeOptions, setEmployeeOptions] = useState<{label: string, value: any}[]>([]);
+
+  const fetchDetails = async () => {
+    try {
+      setIsLoading(true);
+      const data = await experienceService.getById(id);
+      setExperience(data);
+    } catch (err: any) {
+      notify.handleApiError(err as { message?: string });
+      setError(err?.message || "Failed to load experience details");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (!isValidId) {
+      setIsLoading(false);
+      return;
+    }
+    fetchDetails();
+  }, [id, isValidId]);
+
+  useEffect(() => {
+    const fetchEmployees = async () => {
+      try {
+        const res = await employeeService.getAll({ limit: 1000 });
+        setEmployeeOptions(res.data.map((emp: any) => ({
+          label: `${emp.code} - ${emp.full_name}`,
+          value: emp.id
+        })));
+      } catch (e) {
+        notify.handleApiError(e as { message?: string });
+      }
+    };
+    fetchEmployees();
+  }, []);
+
+  const handleSubmit = async (formData: any) => {
+    setIsSubmitting(true);
+    setFormError(null);
+    setFormSuccess(null);
+    try {
+      await experienceService.update(id, formData);
+      notify.success(t('messages.updateSuccess'));
+      setFormSuccess(t('messages.updateSuccess'));
+      setTimeout(() => {
+        setIsModalOpen(false);
+        fetchDetails();
+      }, 1500);
+    } catch (err: any) {
+      notify.handleApiError(err as { message?: string });
+      setFormError(err?.message || t('messages.operationFailed'));
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  if (isLoading) return (<RoleGuard permission="read:employees"><Loading className="min-h-[60vh]" /></RoleGuard>);
+
+  if (!isValidId) {
+    return (
+      <RoleGuard permission="read:employees">
+      <div className="p-6">
+        <div className="rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-rose-700 font-bold">معرّف غير صالح</div>
+      </div>
+      </RoleGuard>
+    );
+  }
+
+  if (error) {
+    return (
+      <RoleGuard permission="read:employees">
+      <div className="p-6">
+        <div className="rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-rose-700 font-bold">{error}</div>
+      </div>
+      </RoleGuard>
+    );
+  }
+
+  if (!experience) {
+    return (
+      <RoleGuard permission="read:employees">
+      <div className="p-6">
+        <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-700 font-bold">لا توجد بيانات</div>
+      </div>
+      </RoleGuard>
+    );
+  }
+
+
+  
+  // Primary Data Array
+  const detailItems = [
+    { label: t('form.company'), value: experience.company_name, icon: <Building2 size={18} className="text-indigo-500" /> },
+    { label: t('form.position'), value: experience.position, icon: <Briefcase size={18} className="text-amber-500" /> },
+    { 
+      label: t('table.duration'), 
+      value: `${experience.from_date} - ${experience.to_date}`, 
+      icon: <CalendarDays size={18} className="text-emerald-500" />,
+      isDuration: true 
+    },
+  ];
+
+  // System Logs Array
+  const systemItems = [
+    { label: t('createdAt'), value: experience.createdAt ? new Date(experience.createdAt).toLocaleString(isAr ? 'ar-EG' : 'en-US') : "—", icon: <Calendar size={14} /> },
+    { label: t('updatedAt'), value: experience.updatedAt ? new Date(experience.updatedAt).toLocaleString(isAr ? 'ar-EG' : 'en-US') : "—", icon: <Clock size={14} /> },
+  ];
+
+  return (
+    <RoleGuard permission="read:employees">
+    <div className="p-6 space-y-6 max-w-7xl mx-auto">
+      {/* Navigation & Breadcrumbs */}
+      <div className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-widest">
+        <button onClick={() => router.push('/employeeExperience')} className="hover:text-indigo-600 transition-colors">
+          {t('title')}
+        </button>
+        <ChevronRight size={14} className={isAr ? "rotate-180" : ""} />
+        <span className="text-slate-800">{experience.company_name}</span>
+      </div>
+
+      <div className="bg-white rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden">
+        {/* Banner Header */}
+        <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 text-white relative overflow-hidden">
+          <div className="absolute -right-10 -bottom-10 opacity-10 rotate-12">
+            <History size={240} />
+          </div>
+          
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative z-10">
+            <div className="flex items-center gap-6">
+              <div className="w-20 h-20 bg-white/10 backdrop-blur-xl rounded-3xl flex items-center justify-center border border-white/20 shadow-2xl">
+                <Briefcase size={40} className="text-blue-300" />
+              </div>
+              <div>
+                <div className="flex items-center gap-3 mb-1">
+                    <h1 className="text-3xl font-black tracking-tight">{experience.position}</h1>
+                    <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase border ${experience.is_deleted ? 'bg-rose-500/20 border-rose-500/40 text-rose-200' : 'bg-blue-500/20 border-blue-500/40 text-blue-200'}`}>
+                        {experience.company_name}
+                    </span>
+                </div>
+                <div className="flex items-center gap-4 text-slate-400 text-sm font-medium">
+                    <div className="flex items-center gap-1.5">
+                        <Hash size={14} /> ID: {experience.id}
+                    </div>
+                    <div className="w-1.5 h-1.5 bg-slate-600 rounded-full"></div>
+                    <div className="flex items-center gap-1.5 text-blue-300">
+                        <Calendar size={14} /> {experience.from_date} - {experience.to_date}
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <EditButton 
+                onClick={() => setIsModalOpen(true)} 
+                className="bg-white/10 hover:bg-white/20 border-white/20 text-white" 
+              />
+              <button 
+                onClick={() => router.back()}
+                className="px-6 py-3 bg-white text-slate-900 rounded-2xl font-black text-xs transition-all hover:bg-slate-100 flex items-center gap-2 shadow-xl"
+              >
+                <ArrowLeft size={16} className={isAr ? "rotate-180" : ""} />
+                {t('backToList')}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Content Grid */}
+        <div className="p-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Primary Details */}
+            <div className="lg:col-span-2 space-y-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {detailItems.map((item, idx) => (
+                        <div key={idx} className="p-6 rounded-3xl border border-slate-100 bg-slate-50 group hover:border-blue-200 transition-all">
+                            <div className="flex items-center gap-3 mb-3">
+                                <div className="p-2 bg-white rounded-xl shadow-sm border border-slate-100 group-hover:scale-110 transition-transform">
+                                    {item.icon}
+                                </div>
+                                <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{item.label}</span>
+                            </div>
+                            <div className="text-slate-800 font-bold text-lg">
+                                {item.isDuration ? (
+                                    <div className="flex items-center gap-2">
+                                        {experience.from_date}
+                                        <ArrowRightLeft size={14} className="text-slate-300" />
+                                        {experience.to_date}
+                                    </div>
+                                ) : item.value}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* System Logs Area */}
+                <div className="p-6 rounded-[2rem] border border-slate-100 bg-slate-50/50">
+                    <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                        <Clock size={14} /> {t('systemLogs')}
+                    </h4>
+                    <div className="space-y-3">
+                        {systemItems.map((item, idx) => (
+                            <div key={idx} className="flex justify-between items-center text-sm">
+                                <span className="text-slate-500 font-medium">{item.label}</span>
+                                <span className="text-slate-700 font-bold">{item.value}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* Sidebar: Associated Employee */}
+            <div className="space-y-6">
+                <div className="p-8 rounded-[2.5rem] bg-indigo-50 border border-indigo-100 relative overflow-hidden group">
+                    <div className="absolute -right-4 -top-4 opacity-5 group-hover:scale-110 transition-transform">
+                        <User size={120} />
+                    </div>
+                    
+                    <div className="relative z-10">
+                        <div className="flex items-center gap-2 text-[10px] font-black text-indigo-600 uppercase tracking-widest mb-6">
+                            <User size={14} />
+                            {t('profile')}
+                        </div>
+                        
+                        <div className="mb-8">
+                            <h3 className="text-2xl font-black text-slate-900 mb-1">
+                                {experience.Employee?.full_name || `ID: ${experience.employee_id}`}
+                            </h3>
+                            <p className="text-indigo-600 font-bold text-sm flex items-center gap-2">
+                                <Hash size={14} /> {t('code')}: {experience.Employee?.code || "N/A"}
+                            </p>
+                        </div>
+
+                        <button 
+                            onClick={() => router.push(`/employees/${experience.employee_id}`)}
+                            className="w-full py-4 bg-indigo-600 text-white rounded-2xl font-black text-xs hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-100 flex items-center justify-center gap-2"
+                        >
+                            <User size={16} />
+                            {t('profile')}
+                            <ChevronRight size={16} className={isAr ? "rotate-180" : ""} />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      {/* Edit Modal */}
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title={t('editExperience')}>
+        <div className="p-1">
+          <DynamicForm
+            fields={[
+              { 
+                name: "employee_id", 
+                label: t('form.employee'), 
+                type: "searchable-select", 
+                defaultValue: experience.employee_id, 
+                required: true,
+                options: employeeOptions,
+                placeholder: t('form.employeeSearchPlaceholder')
+              },
+              { name: "company_name", label: t('form.company'), type: "text", defaultValue: experience.company_name, required: true },
+              { name: "position", label: t('form.position'), type: "text", defaultValue: experience.position, required: true },
+              { name: "from_date", label: t('form.fromDate'), type: "date", defaultValue: experience.from_date, required: true },
+              { name: "to_date", label: t('form.toDate'), type: "date", defaultValue: experience.to_date, required: true },
+            ]}
+            onSubmit={handleSubmit}
+              error={formError}
+            success={formSuccess}
+          >
+            <div className="flex justify-end pt-4 mt-4 border-t border-slate-100">
+              <SaveButton isSubmitting={isSubmitting} />
+            </div>
+          </DynamicForm>
+        </div>
+      </Modal>
+    </div>
+    </RoleGuard>
+  );
+}

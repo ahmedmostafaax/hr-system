@@ -1,0 +1,20 @@
+# Local environment and secret files
+**/.env
+**/.env.*
+!**/.env.example
+
+# Dependencies and build output
+**/node_modules/
+**/.next/
+**/dist/
+**/build/
+**/coverage/
+
+# Local deployment archive contains environment files
+/ERB-deploy.zip
+
+# OS and tooling files
+.DS_Store
+*.tsbuildinfo
+*.pem
+

@@ -1,0 +1,925 @@
+{
+  "sidebar": {
+    "subtitle": "Management System",
+    "logout": "Logout",
+    "groups": {
+      "home": "Home",
+      "hr": "Human Resources",
+      "financial": "Financial Transactions",
+      "payroll": "Payroll",
+      "accounting": "Accounting",
+      "reports": "Reports",
+      "settings": "Settings",
+      "admin": "Administration",
+      "self": "My Account",
+      "employees": "Employees",
+      "contracts": "Contracts",
+      "transactions": "Transactions"
+    },
+    "items": {
+      "dashboard": "Dashboard",
+      "attendance": "Attendance",
+      "payroll": "Payroll Runs",
+      "journalEntries": "Journal Entries",
+      "accountingPeriods": "Accounting Periods",
+      "reports": "Reports",
+      "users": "Users",
+      "auditLog": "Audit Log",
+      "departments": "Departments",
+      "shift": "Shift",
+      "leave_type": "Leave Types",
+      "officialHolidays": "Official Holidays",
+      "account": "Account",
+      "allowance_types": "Allowance Types",
+      "absence_types": "Absence Types",
+      "bonus_types": "Bonus Types",
+      "insurance_settings": "Insurance Settings",
+      "employees": "Employees",
+      "employeeDocument": "Employee Documents",
+      "employeeRelative": "Employee Relatives",
+      "employeeExperience": "Employee Experience",
+      "contracts": "Contracts",
+      "contract_allowances": "Contract Allowances",
+      "contract_leaves": "Contract Leaves",
+      "custody": "Custody",
+      "employeeLoan": "Employee Loans",
+      "employeeBonus": "Employee Bonuses",
+      "absences": "Absences",
+      "leave_requests": "Leave Requests",
+      "myProfile": "My Profile",
+      "myLeave": "My Leave Requests",
+      "myLoans": "My Loans & Advances",
+      "myAttendance": "Attendance"
+    }
+  },
+  "common": {
+    "table": {
+      "emptyMessage": "No data available",
+      "loadingMessage": "Loading...",
+      "searchPlaceholder": "Search...",
+      "filterLabel": "Filter",
+      "addFirstItem": "Add the first item to get started",
+      "addNew": "Add New"
+    },
+    "actions": {
+      "add": "Add",
+      "save": "Save",
+      "saving": "Saving...",
+      "delete": "Delete",
+      "restore": "Restore",
+      "confirmDelete": "Confirm Delete",
+      "confirmRestore": "Confirm Restore",
+      "deleteMessage": "Are you sure you want to delete this item? This action cannot be undone.",
+      "restoreMessage": "Are you sure you want to restore this item?",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "errorOccurred": "An error occurred during "
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "showing": "Showing page",
+      "of": "of",
+      "totalItems": "Total items:"
+    }
+  },
+  "login": {
+    "title": "Welcome Back",
+    "subtitle": "Sign in to your account",
+    "identifier": "Phone Number or Email",
+    "password": "Password",
+    "submit": "Sign In",
+    "loading": "Signing in...",
+    "forgotPassword": "Forgot password?",
+    "error": {
+      "invalid": "Invalid username or password",
+      "generic": "Something went wrong. Please try again."
+    },
+    "validation": {
+      "usernameRequired": "Username is required",
+      "passwordRequired": "Password is required",
+      "passwordMin": "Password must be at least 6 characters"
+    }
+  },
+  "changePassword": {
+    "title": "Change Password",
+    "subtitle": "Enter your current and new password",
+    "forceResetSubtitle": "You must change your password before continuing",
+    "forceResetNotice": "This is your first login. Enter the temporary password you received, then choose a new password.",
+    "tempPassword": "Temporary password",
+    "currentPassword": "Current password",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm new password",
+    "submit": "Save password",
+    "success": "Password changed successfully",
+    "invalidTempPassword": "Incorrect temporary password",
+    "invalidCurrentPassword": "Incorrect current password",
+    "genericError": "Something went wrong"
+  },
+  "departments": {
+    "title": "Departments",
+    "subtitle": "Manage and view the organizational structure",
+    "stats": {
+      "total": "Total Departments",
+      "active": "Active Depts",
+      "new": "New Depts",
+      "efficiency": "System Efficiency",
+      "updatedToday": "Updated Today",
+      "lastMonth": "{count} more than last month",
+      "optimal": "Optimal Performance"
+    },
+    "addNew": "Add New Department",
+    "editDepartment": "Edit Department",
+    "form": {
+      "name": "Department Name",
+      "namePlaceholder": "e.g. Accounting",
+      "type": "Type",
+      "typePlaceholder": "e.g. Administrative",
+      "parent": "Parent Department (Optional)",
+      "parentNone": "None"
+    },
+    "types": {
+      "qabz": "Receipt",
+      "sarf": "Disbursement",
+      "edari": "Administrative"
+    },
+    "buttons": {
+      "add": "Add Department",
+      "update": "Update",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "search": "Search...",
+      "newDepartment": "New",
+      "retry": "Retry"
+    },
+    "messages": {
+      "addSuccess": "Department added successfully",
+      "updateSuccess": "Department updated successfully",
+      "deleteSuccess": "Department deleted successfully",
+      "deleteConfirm": "Are you sure you want to delete this department?",
+      "fetchError": "Failed to load departments",
+      "operationFailed": "An error occurred, please try again",
+      "loading": "Loading...",
+      "noData": "No departments found",
+      "processing": "Processing..."
+    },
+    "table": {
+      "id": "ID",
+      "name": "Name",
+      "type": "Type",
+      "parent": "Parent",
+      "status": "Status",
+      "active": "Active",
+      "inactive": "Inactive",
+      "createdAt": "Created At",
+      "actions": "Actions"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page"
+    }
+  },
+  "employees": {
+    "title": "Employees",
+    "description": "Manage your team members",
+    "subtitle": "Manage team members data",
+    "editEmployee": "Edit Employee",
+    "addNew": "Add New Employee",
+    "form": {
+      "code": "Employee Code",
+      "fullName": "Full Name",
+      "nationalId": "National ID",
+      "birthDate": "Birth Date",
+      "gender": "Gender",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "address": "Address",
+      "maritalStatus": "Marital Status",
+      "qualification": "Qualification",
+      "bankName": "Bank Name",
+      "bankAccount": "Bank Account"
+    },
+    "table": {
+      "code": "Code",
+      "name": "Name",
+      "phone": "Phone",
+      "nationalId": "National ID",
+      "age": "Age",
+      "department": "Department",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "buttons": {
+      "search": "Search employees...",
+      "newEmployee": "New Employee",
+      "add": "Add",
+      "update": "Update",
+      "delete": "Delete"
+    },
+    "messages": {
+      "addSuccess": "Added successfully",
+      "updateSuccess": "Updated successfully",
+      "operationFailed": "Operation failed, please try again",
+      "noData": "No employees found",
+      "confirmDelete": "Confirm delete",
+      "deleteWarning": "Are you sure you want to delete this employee?"
+    }
+  },
+  "bonus": {
+    "title": "Bonus",
+    "description": "Manage employee bonuses"
+  },
+  "shifts": {
+    "title": "Shifts Management",
+    "subtitle": "Define work hours and days",
+    "stats": {
+      "total": "Total Shifts",
+      "totalSubtitle": "All registered shifts",
+      "active": "Active Shifts",
+      "activeSubtitle": "Shifts currently in operation",
+      "avgHours": "Avg. Work Hours",
+      "avgHoursSubtitle": "Per single shift",
+      "employees": "Allocated Employees",
+      "employeesSubtitle": "Employees linked to shifts"
+    },
+    "addNew": "Add Shift",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "e.g. Morning",
+      "type": "Type",
+      "typePlaceholder": "Select shift type",
+      "startTime": "Start Time",
+      "endTime": "End Time",
+      "graceMinutes": "Grace Mins",
+      "deductGrace": "Deduct Delay",
+      "deductGraceHint": "Delay minutes are deducted from salary",
+      "salaryBasisDays": "Salary Basis (Days/Month)",
+      "workDays": "Work Days",
+      "salaryBasis": "Salary Basis"
+    },
+    "types": {
+      "morning": "Morning",
+      "evening": "Evening",
+      "night": "Night",
+      "split": "Split"
+    },
+    "days": {
+      "sun": "Sunday",
+      "mon": "Monday",
+      "tue": "Tuesday",
+      "wed": "Wednesday",
+      "thu": "Thursday",
+      "fri": "Friday",
+      "sat": "Saturday"
+    },
+    "buttons": {
+      "add": "Add",
+      "update": "Update",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "search": "Search...",
+      "filter": "Filter",
+      "newShift": "New Shift"
+    },
+    "messages": {
+      "addSuccess": "Added successfully",
+      "updateSuccess": "Updated successfully",
+      "deleteSuccess": "Shift deleted successfully",
+      "fetchError": "Failed to fetch data",
+      "operationFailed": "Operation failed",
+      "loading": "Loading...",
+      "noData": "No shifts found",
+      "confirmDelete": "Confirm delete",
+      "deleteWarning": "Are you sure you want to delete this shift?",
+      "nameRequired": "Shift name is required",
+      "dayRequired": "Select at least one work day",
+      "fetchDetails": "Fetching details..."
+    },
+    "table": {
+      "id": "ID",
+      "name": "Name",
+      "type": "Type",
+      "workDays": "Work Days",
+      "times": "Times",
+      "actions": "Actions",
+      "timeRange": "Time Range",
+      "grace": "Grace Mins"
+    },
+    "editShift": "Edit Shift"
+  },
+  "leaveTypes": {
+    "title": "Leave Types",
+    "subtitle": "Manage leaves",
+    "addNew": "Add Leave Type",
+    "stats": {
+      "totalSubtitle": "All available types",
+      "avgBalanceSubtitle": "Days / Year",
+      "deductibleSubtitle": "Deducted from salary"
+    },
+    "table": {
+      "name": "Name",
+      "annualBalance": "Balance",
+      "affectsDeduction": "Affects Deduction",
+      "actions": "Actions"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "e.g. Marriage",
+      "annualBalance": "Balance",
+      "annualBalancePlaceholder": "0",
+      "affectsDeduction": "Affects Deduction",
+      "affectsDeductionHint": "Will this leave be deducted from the employee's salary?",
+      "balancePlaceholder": "0",
+      "deductionHint": "Affects deduction",
+      "defaultDays": "Default Days",
+      "isPaid": "Is Paid Leave",
+      "paidHint": "Is the full salary paid during this leave?",
+      "requiresAttachment": "Requires Attachment",
+      "attachmentHint": "Does the employee need to upload documents?",
+      "deductFromBalance": "Deduct from Balance",
+      "deductHint": "Is this deducted from the annual leave balance?",
+      "genderSpecific": "Gender Specific",
+      "both": "Both",
+      "male": "Male",
+      "female": "Female"
+    },
+    "messages": {
+      "addSuccess": "Added successfully",
+      "updateSuccess": "Updated successfully",
+      "deleteSuccess": "Leave type deleted successfully",
+      "fetchError": "Failed to load leave types",
+      "operationFailed": "Operation failed"
+    },
+    "validation": {
+      "nameRequired": "Leave name is required",
+      "balanceRequired": "Annual balance is required",
+      "balanceNumber": "Balance must be a number",
+      "balanceMin": "Balance must be 0 or more",
+      "deductionRequired": "Please specify if it affects deduction"
+    },
+    "buttons": {
+      "search": "Search...",
+      "newLeaveType": "New Leave",
+      "add": "Add",
+      "update": "Update"
+    },
+    "editLeaveType": "Edit Leave Type"
+  },
+  "officialHolidays": {
+    "title": "Official Holidays",
+    "subtitle": "Manage holidays",
+    "addNew": "Add Holiday",
+    "stats": {
+      "total": "Total Holidays",
+      "totalSubtitle": "Holidays registered this year",
+      "upcoming": "Upcoming",
+      "upcomingSubtitle": "Events arriving soon",
+      "totalDays": "Total Days Off",
+      "totalDaysSubtitle": "Official vacation days"
+    },
+    "table": {
+      "name": "Name",
+      "startDate": "Start Date",
+      "daysCount": "Days Count",
+      "actions": "Actions",
+      "duration": "Duration"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "e.g. Eid",
+      "startDate": "Start Date",
+      "daysCount": "Days",
+      "daysCountPlaceholder": "1",
+      "daysPlaceholder": "e.g. 3"
+    },
+    "messages": {
+      "addSuccess": "Added successfully",
+      "updateSuccess": "Updated successfully",
+      "deleteSuccess": "Holiday deleted successfully",
+      "fetchError": "Failed to load official holidays",
+      "operationFailed": "Operation failed"
+    },
+    "validation": {
+      "nameRequired": "Holiday name is required",
+      "dateInvalid": "Invalid date format (YYYY-MM-DD)",
+      "daysRequired": "Days count is required",
+      "daysNumber": "Days count must be a number",
+      "daysMin": "Holiday must be at least 1 day long"
+    },
+    "buttons": {
+      "search": "Search...",
+      "newHoliday": "New Holiday",
+      "add": "Add",
+      "update": "Update"
+    },
+    "editHoliday": "Edit Holiday"
+  },
+  "account": {
+    "title": "Chart of Accounts",
+    "subtitle": "Manage accounts",
+    "addNew": "Add Account",
+    "table": {
+      "name": "Name",
+      "code": "Code",
+      "type": "Type",
+      "currency": "Currency",
+      "actions": "Actions",
+      "parent": "Parent Account"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "e.g. Cash",
+      "code": "Code",
+      "codePlaceholder": "1101",
+      "type": "Type",
+      "typePlaceholder": "Select Type",
+      "parentId": "Parent Account",
+      "parentIdPlaceholder": "Select parent account (optional)",
+      "description": "Desc",
+      "descriptionPlaceholder": "Add a description...",
+      "currency": "Currency",
+      "currencyPlaceholder": "e.g., EGP",
+      "parentAccount": "Parent Account",
+      "noParent": "None",
+      "descPlaceholder": "Account description"
+    },
+    "validation": {
+      "nameRequired": "Account name is required",
+      "codeRequired": "Account code is required",
+      "typeRequired": "Account type is required",
+      "currencyRequired": "Currency is required"
+    },
+    "buttons": {
+      "search": "Search...",
+      "newAccount": "New Account",
+      "add": "Add",
+      "update": "Update"
+    },
+    "messages": {
+      "operationFailed": "Operation failed",
+      "addSuccess": "Added successfully",
+      "updateSuccess": "Updated successfully"
+    },
+    "editAccount": "Edit Account"
+  },
+  "allowanceTypes": {
+    "title": "Allowance Types",
+    "subtitle": "Manage allowances",
+    "addNew": "Add Allowance",
+    "table": {
+      "name": "Name",
+      "defaultAmount": "Default Amount",
+      "isPartOfSalary": "Part of Salary",
+      "accountCode": "Code",
+      "actions": "Actions",
+      "amount": "Amount",
+      "salaryStatus": "Salary Status"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "e.g. Transport",
+      "defaultAmount": "Amount",
+      "defaultAmountPlaceholder": "0.00",
+      "isPartOfSalary": "Part of Salary",
+      "isPartOfSalaryHint": "Should this allowance be calculated within the basic salary components?",
+      "accountCode": "Code",
+      "accountCodePlaceholder": "e.g., 5101",
+      "salaryHint": "Included in basic salary?"
+    },
+    "messages": {
+      "addSuccess": "Added successfully",
+      "updateSuccess": "Updated successfully",
+      "deleteSuccess": "Allowance type deleted successfully",
+      "fetchError": "Failed to load allowance types",
+      "operationFailed": "Operation failed"
+    },
+    "validation": {
+      "nameRequired": "Allowance name is required",
+      "amountMin": "Amount must be 0 or more",
+      "accountRequired": "Account code is required"
+    },
+    "buttons": {
+      "search": "Search...",
+      "newAllowance": "New Allowance",
+      "add": "Add",
+      "update": "Update"
+    },
+    "editAllowance": "Edit Allowance"
+  },
+  "accounts": {
+    "title": "Chart of Accounts",
+    "subtitle": "Manage accounts",
+    "addNew": "Add Account",
+    "table": {
+      "name": "Name",
+      "code": "Code",
+      "type": "Type",
+      "currency": "Currency",
+      "actions": "Actions",
+      "parent": "Parent Account"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "e.g. Cash",
+      "code": "Code",
+      "codePlaceholder": "1101",
+      "type": "Type",
+      "typePlaceholder": "Select Type",
+      "parentId": "Parent Account",
+      "parentIdPlaceholder": "Select parent account (optional)",
+      "description": "Desc",
+      "descriptionPlaceholder": "Add a description...",
+      "currency": "Currency",
+      "currencyPlaceholder": "e.g., EGP",
+      "parentAccount": "Parent Account",
+      "noParent": "None",
+      "descPlaceholder": "Account description"
+    },
+    "validation": {
+      "nameRequired": "Account name is required",
+      "codeRequired": "Account code is required",
+      "typeRequired": "Account type is required",
+      "currencyRequired": "Currency is required"
+    },
+    "buttons": {
+      "search": "Search...",
+      "newAccount": "New Account",
+      "add": "Add",
+      "update": "Update"
+    },
+    "messages": {
+      "operationFailed": "Operation failed",
+      "addSuccess": "Added successfully",
+      "updateSuccess": "Updated successfully"
+    },
+    "editAccount": "Edit Account"
+  },
+  "allowances": {
+    "title": "Allowance Types",
+    "subtitle": "Manage allowances",
+    "addNew": "Add Allowance",
+    "additionalDetails": "Additional Details",
+    "isPartOfSalaryStatus": "Part of Salary",
+    "extraAllowanceStatus": "Extra Allowance",
+    "yes": "Yes",
+    "no": "No",
+    "table": {
+      "name": "Name",
+      "defaultAmount": "Default Amount",
+      "isPartOfSalary": "Part of Salary",
+      "accountCode": "Code",
+      "actions": "Actions",
+      "amount": "Amount",
+      "salaryStatus": "Salary Status"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "e.g. Transport",
+      "defaultAmount": "Amount",
+      "defaultAmountPlaceholder": "0.00",
+      "isPartOfSalary": "Part of Salary",
+      "isPartOfSalaryHint": "Should this allowance be calculated within the basic salary components?",
+      "accountCode": "Code",
+      "accountCodePlaceholder": "e.g., 5101",
+      "salaryHint": "Included in basic salary?",
+      "selectAccount": "Select Account"
+    },
+    "messages": {
+      "addSuccess": "Added successfully",
+      "updateSuccess": "Updated successfully",
+      "deleteSuccess": "Allowance type deleted successfully",
+      "fetchError": "Failed to load allowance types",
+      "operationFailed": "Operation failed"
+    },
+    "validation": {
+      "nameRequired": "Allowance name is required",
+      "amountMin": "Amount must be 0 or more",
+      "accountRequired": "Account code is required"
+    },
+    "buttons": {
+      "search": "Search...",
+      "newAllowance": "New Allowance",
+      "add": "Add",
+      "update": "Update"
+    },
+    "editAllowance": "Edit Allowance"
+  },
+  "holidays": {
+    "title": "Official Holidays",
+    "subtitle": "Manage holidays",
+    "addNew": "Add Holiday",
+    "stats": {
+      "total": "Total Holidays",
+      "totalSubtitle": "Holidays registered this year",
+      "upcoming": "Upcoming",
+      "upcomingSubtitle": "Events arriving soon",
+      "totalDays": "Total Days Off",
+      "totalDaysSubtitle": "Official vacation days"
+    },
+    "table": {
+      "name": "Name",
+      "startDate": "Start Date",
+      "daysCount": "Days Count",
+      "actions": "Actions",
+      "duration": "Duration"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "e.g. Eid",
+      "startDate": "Start Date",
+      "daysCount": "Days",
+      "daysCountPlaceholder": "1",
+      "daysPlaceholder": "e.g. 3"
+    },
+    "messages": {
+      "addSuccess": "Added successfully",
+      "updateSuccess": "Updated successfully",
+      "deleteSuccess": "Holiday deleted successfully",
+      "fetchError": "Failed to load official holidays",
+      "operationFailed": "Operation failed"
+    },
+    "validation": {
+      "nameRequired": "Holiday name is required",
+      "dateInvalid": "Invalid date format (YYYY-MM-DD)",
+      "daysRequired": "Days count is required",
+      "daysNumber": "Days count must be a number",
+      "daysMin": "Holiday must be at least 1 day long"
+    },
+    "buttons": {
+      "search": "Search...",
+      "newHoliday": "New Holiday",
+      "add": "Add",
+      "update": "Update"
+    },
+    "editHoliday": "Edit Holiday"
+  },
+  "absences": {
+    "title": "Absence Types",
+    "subtitle": "Manage absence types and reasons",
+    "editAbsenceType": "Edit Absence Type",
+    "editAbsence": "Edit Absence",
+    "addNew": "Add New Absence",
+    "absencePolicy": "Absence Policy",
+    "requiresApprovalStatus": "Yes, Requires Approval",
+    "directAbsenceStatus": "No, Direct Absence",
+    "form": {
+      "name": "Absence Name",
+      "namePlaceholder": "e.g. Unexcused Absence",
+      "deductDays": "Deduction Factor (Days)",
+      "daysPlaceholder": "e.g. 1.5",
+      "requiresPermission": "Requires Permission",
+      "permissionHint": "Does this absence require prior approval?"
+    },
+    "table": {
+      "name": "Type Name",
+      "deductFactor": "Deduction Factor",
+      "permission": "Permission",
+      "actions": "Actions"
+    },
+    "buttons": {
+      "search": "Search absence types...",
+      "newAbsenceType": "New Absence",
+      "add": "Add",
+      "update": "Update"
+    },
+    "messages": {
+      "addSuccess": "Added successfully",
+      "updateSuccess": "Updated successfully",
+      "operationFailed": "Operation failed, please try again"
+    }
+  },
+  "bonuses": {
+    "title": "Bonus Types",
+    "subtitle": "Manage employee bonuses and incentives",
+    "editBonusType": "Edit Bonus Type",
+    "addNew": "Add New Bonus",
+    "form": {
+      "name": "Bonus Name",
+      "namePlaceholder": "e.g. Performance Bonus",
+      "paymentType": "Payment Type",
+      "defaultAmount": "Default Amount",
+      "editableAmount": "Editable",
+      "editableHint": "Can the amount be modified when granted?"
+    },
+    "table": {
+      "name": "Bonus Name",
+      "defaultAmount": "Default Amount",
+      "paymentMethod": "Payment Method",
+      "flexibility": "Flexibility",
+      "actions": "Actions"
+    },
+    "buttons": {
+      "search": "Search bonuses...",
+      "newBonusType": "New Bonus",
+      "add": "Add",
+      "update": "Update"
+    },
+    "messages": {
+      "addSuccess": "Added successfully",
+      "updateSuccess": "Updated successfully",
+      "operationFailed": "Operation failed, please try again"
+    }
+  },
+  "insurance": {
+    "title": "Insurance Settings",
+    "subtitle": "Manage social and health insurance rates",
+    "editSetting": "Edit Settings",
+    "addNew": "Add Insurance Setting",
+    "form": {
+      "employeeRate": "Employee Rate (%)",
+      "companyRate": "Company Rate (%)",
+      "effectiveFrom": "Effective From"
+    },
+    "table": {
+      "employeeRate": "Employee Rate",
+      "companyRate": "Company Rate",
+      "effectiveDate": "Effective Date",
+      "totalRate": "Total Rate",
+      "actions": "Actions"
+    },
+    "buttons": {
+      "search": "Search settings...",
+      "newSetting": "New Setting",
+      "add": "Add",
+      "update": "Update"
+    },
+    "messages": {
+      "addSuccess": "Added successfully",
+      "updateSuccess": "Updated successfully",
+      "operationFailed": "Operation failed, please try again"
+    }
+  },
+  "experience": {
+    "title": "Employee Experiences",
+    "subtitle": "Manage employment history and previous experiences of employees",
+    "editExperience": "Edit Experience",
+    "addExperience": "Add New Experience",
+    "form": {
+      "employee": "Employee",
+      "employeeSearchPlaceholder": "Search for an employee...",
+      "company": "Company Name",
+      "position": "Job Title",
+      "fromDate": "From Date",
+      "toDate": "To Date"
+    },
+    "table": {
+      "employee": "Employee",
+      "role": "Position & Company",
+      "duration": "Duration",
+      "actions": "Actions"
+    },
+    "buttons": {
+      "searchPlaceholder": "Search experiences...",
+      "newExperience": "New Experience",
+      "save": "Save Experience",
+      "update": "Update Experience"
+    },
+    "messages": {
+      "addSuccess": "Experience added successfully",
+      "updateSuccess": "Experience updated successfully",
+      "operationFailed": "Operation failed, please try again"
+    },
+    "backToList": "Back to List",
+    "systemLogs": "System Logs",
+    "profile": "Employee Profile",
+    "createdAt": "Created At",
+    "updatedAt": "Last Updated",
+    "code": "Code"
+  },
+  "documents": {
+    "title": "Employee Documents",
+    "subtitle": "View and manage uploaded files for employees",
+    "addDoc": "Add Document",
+    "editDoc": "Edit Document",
+    "owner": "Document Owner",
+    "fileLink": "Digital File Link",
+    "openLink": "Open Link",
+    "profile": "Employee Profile",
+    "uploadDate": "Upload Date",
+    "uploadTime": "Upload Time",
+    "createdAt": "Created At",
+    "updatedAt": "Last Updated",
+    "status": "Status",
+    "active": "Active",
+    "deleted": "Deleted",
+    "back": "Back",
+    "code": "Employee Code",
+    "form": {
+      "employee": "Employee",
+      "employeeSearchPlaceholder": "Search for an employee...",
+      "docName": "Document Name",
+      "docNamePlaceholder": "e.g. Identity Card",
+      "file": "File URL",
+      "filePlaceholder": "Paste file link here..."
+    },
+    "table": {
+      "employee": "Employee",
+      "docName": "Document Name",
+      "view": "Preview",
+      "viewFile": "View File",
+      "actions": "Actions"
+    },
+    "messages": {
+      "addSuccess": "Document added successfully",
+      "updateSuccess": "Document updated successfully",
+      "deleteSuccess": "Document deleted successfully",
+      "operationFailed": "Operation failed, please try again"
+    },
+    "buttons": {
+        "newDoc": "New Document",
+        "searchPlaceholder": "Search documents...",
+        "save": "Save",
+        "update": "Update"
+    }
+  },
+  "relatives": {
+    "title": "Employee Relatives",
+    "subtitle": "Manage and view family members linked to employees",
+    "addRelative": "Add Relative",
+    "editRelative": "Edit Relative",
+    "backToList": "Back to List",
+    "systemLogs": "System Logs",
+    "associatedEmployee": "Associated Employee",
+    "createdAt": "Created At",
+    "updatedAt": "Last Updated",
+    "openProfile": "Open Employee Profile",
+    "code": "Code",
+    "form": {
+      "employee": "Employee",
+      "employeePlaceholder": "Search for an employee...",
+      "name": "Relative Name",
+      "namePlaceholder": "e.g. Ahmed Ali",
+      "relation": "Relation",
+      "phone": "Phone Number",
+      "phonePlaceholder": "e.g. 0123456789"
+    },
+    "table": {
+      "employee": "Employee",
+      "name": "Name",
+      "relation": "Relation",
+      "phone": "Phone",
+      "actions": "Actions"
+    },
+    "relations": {
+      "Father": "Father",
+      "Mother": "Mother",
+      "Spouse": "Spouse",
+      "Son": "Son",
+      "Daughter": "Daughter",
+      "Brother": "Brother",
+      "Sister": "Sister",
+      "Other": "Other"
+    },
+    "messages": {
+      "addSuccess": "Relative added successfully",
+      "updateSuccess": "Relative updated successfully",
+      "operationFailed": "Operation failed, please try again"
+    },
+    "buttons": {
+      "newRelative": "New Relative",
+      "searchPlaceholder": "Search relatives...",
+      "save": "Save",
+      "update": "Update"
+    }
+  },
+  "contracts": {
+    "title": "Contracts",
+    "subtitle": "Manage employee contracts and records",
+    "editContract": "Edit Contract",
+    "addNew": "Add New Contract",
+    "form": {
+      "employee": "Employee",
+      "jobTitle": "Job Title",
+      "department": "Department",
+      "baseSalary": "Base Salary",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "duration": "Duration (Years)",
+      "shift": "Shift",
+      "insurance": "Insurance Setting",
+      "status": "Status",
+      "overtime": "Overtime Enabled",
+      "notes": "Notes",
+      "attachment": "Attachment URL"
+    },
+    "table": {
+      "employee": "Employee",
+      "jobTitle": "Job Title",
+      "salary": "Salary",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "buttons": {
+      "search": "Search contracts...",
+      "newContract": "New Contract",
+      "save": "Save Contract",
+      "update": "Update Contract"
+    },
+    "messages": {
+      "addSuccess": "Contract added successfully",
+      "updateSuccess": "Contract updated successfully",
+      "operationFailed": "Operation failed, please try again"
+    }
+  }
+}

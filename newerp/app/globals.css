@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  /* Base */
+  --background: #F8F9FC;
+  --foreground: #020617;
+
+  /* UI */
+  --card: #FFFFFF;
+  --border: #F1F5F9;
+
+  /* Text */
+  --text: #0F172A;
+  --muted: #64748B;
+
+  /* Status */
+  --success: #22C55E;
+  --danger: #EF4444;
+  --warning: #F59E0B;
+}
+
+/* Tailwind theme mapping */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Primary Indigo Palette */
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+
+  /* Core primary aliases */
+  --color-primary: var(--color-primary-600);
+  --color-primary-light: var(--color-primary-500);
+  --color-primary-dark: var(--color-primary-700);
+
+  --color-card: var(--card);
+  --color-border: var(--border);
+
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+}
+
+/* Global styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Flatter UI defaults */
+* {
+  border-color: var(--border);
+}
+
+.shadow-sm, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl {
+  box-shadow: none !important;
+}
+
+.shadow {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02) !important;
+}

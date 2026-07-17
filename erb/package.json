@@ -1,0 +1,49 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only server.ts",
+    "build": "node node_modules/typescript/bin/tsc",
+    "seed": "npx ts-node database/scripts/seed-all-data.ts",
+    "migrate:employee-user": "npx ts-node database/scripts/migrate-employee-user-role.ts",
+    "migrate:fix-enums": "npx ts-node database/scripts/fix-approval-status-enums.ts",
+    "setup:employees": "npx ts-node database/scripts/setup-employee-portal.ts",
+    "migrate:late-hours": "npx ts-node database/scripts/migrate-late-hours.ts",
+    "provision:contract": "npx ts-node database/scripts/provision-employee-contract.ts",
+    "fill:month": "npx ts-node database/scripts/fill-month-prep.ts",
+    "setup:gl": "npx ts-node database/scripts/setup-gl-accounts.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/express-xss-sanitizer": "^2.0.0",
+    "@types/hpp": "^0.2.7",
+    "@types/nodemailer": "^8.0.0",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.0",
+    "express": "^5.2.1",
+    "express-xss-sanitizer": "^2.0.2",
+    "helmet": "^8.1.0",
+    "hpp": "^0.2.3",
+    "joi": "^18.1.1",
+    "jsonwebtoken": "^9.0.3",
+    "nodemailer": "^8.0.4",
+    "pg": "^8.20.0",
+    "sequelize": "^6.37.8",
+    "xss": "^1.0.15"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.5.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^6.0.2"
+  }
+}
