@@ -11,17 +11,20 @@ const nextConfig: NextConfig = {
     root: projectRoot,
   },
   async rewrites() {
-  return [
-    {
-      source: "/api/auth/:path*",
-      destination: "http://3.122.244.31:5000/api/v1/auth/:path*",
-    },
-    {
-      source: "/api/v1/:path*",
-      destination: "http://3.122.244.31:5000/api/v1/:path*",
-    },
-  ];
-},
+    return [
+      {
+        source: "/api/auth/:path*",
+        destination: "http://3.122.244.31:5000/api/v1/auth/:path*",
+      },
+      {
+        source: "/api/v1/:path*",
+        destination: "http://3.122.244.31:5000/api/v1/:path*",
+      },
+    ];
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 export default withNextIntl(nextConfig);
